@@ -1,0 +1,16 @@
+# openai==0.27.7 
+# pinecone-client==3.1.0 
+# pinecone-datasets==0.7.0 
+
+openai
+pinecone-client
+pinecone-datasets
+pydantic==1.10.8
+tqdm 
+pdfplumber 
+langchain_core 
+langchain 
+streamlit
+python-dotenv
+langchain_openai
+langchain_pinecone
