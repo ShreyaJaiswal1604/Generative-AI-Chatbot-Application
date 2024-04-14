@@ -3,6 +3,7 @@ import os
 from utils import *
 from pinecone import Pinecone, PodSpec
 from openai import OpenAI
+import base64
 
 
 pin_api_key=os.environ.get('PINECONE_API_KEY')
@@ -17,6 +18,25 @@ spec = ServerlessSpec(cloud=cloud, region=region)
 index_name =  os.environ.get('PINECONE_INDEX_NAME','pdf-qa-chatbot-streamlit')
 embed_model = "text-embedding-ada-002"
 
+# Set background image
+def sidebar_bg(side_bg):
+
+   side_bg_ext = 'png'
+
+   st.markdown(
+      f"""
+      <style>
+      [data-testid="stSidebar"] > div:first-child {{
+          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
+      }}
+      </style>
+      """,
+      unsafe_allow_html=True,
+      )
+   
+side_bg_ext = '../images/02-img.png'
+
+sidebar_bg(side_bg_ext)
 
 # openai.api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI()

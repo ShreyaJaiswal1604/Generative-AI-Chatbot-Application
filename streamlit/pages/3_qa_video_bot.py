@@ -9,8 +9,30 @@ from langchain_openai.chat_models import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from utils import *
+import base64
 # from dotenv import load_dotenv
 # load_dotenv()
+
+# Set background image
+def sidebar_bg(side_bg):
+
+   side_bg_ext = 'jpeg'
+
+   st.markdown(
+      f"""
+      <style>
+      [data-testid="stSidebar"] > div:first-child {{
+          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
+      }}
+      </style>
+      """,
+      unsafe_allow_html=True,
+      )
+   
+side_bg_ext = '../images/04-img.jpeg'
+
+sidebar_bg(side_bg_ext)
+
 
 
 # if 'messages' not in st.session_state:

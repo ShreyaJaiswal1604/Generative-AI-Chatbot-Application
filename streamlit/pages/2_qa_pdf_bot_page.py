@@ -2,14 +2,37 @@
 import streamlit as st
 import os
 from utils import *
+import base64
 # from dotenv import load_dotenv
 # load_dotenv()
 # if st.session_state.messages is None:
 #     st.session_state.messages = None
 
+
+# Set background image
+def sidebar_bg(side_bg):
+
+   side_bg_ext = 'jpeg'
+
+   st.markdown(
+      f"""
+      <style>
+      [data-testid="stSidebar"] > div:first-child {{
+          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
+      }}
+      </style>
+      """,
+      unsafe_allow_html=True,
+      )
+   
+side_bg_ext = '../images/04-img.jpeg'
+
+sidebar_bg(side_bg_ext)
+
+
 st.session_state.messages = None
 
-st.header(":page_with_curl:Your PDF Bot - PDFPilot")
+st.header(":page_with_curl: Your PDF Bot - PDFPilot")
 
 st.subheader('Hi There, Go ahead and ask your query!', divider='rainbow')
 
