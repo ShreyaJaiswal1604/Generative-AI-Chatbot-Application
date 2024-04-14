@@ -1,4 +1,16 @@
+---
+---
+
 # Generative-AI-Chatbot-Application
+
+---
+---
+
+![til](https://github.com/ShreyaJaiswal1604/Generative-AI-Chatbot-Application/blob/main/videos/chatbot-demo.gif)
+
+---
+---
+
 
 # Chatbot Application
 
