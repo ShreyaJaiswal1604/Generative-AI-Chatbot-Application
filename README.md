@@ -32,6 +32,8 @@ The Generative AI Chatbot Application is designed to simplify interactions with 
 
 ## Project Architecture 🏗️
 
+![Generative AI Chatbot Architecture](https://github.com/ShreyaJaiswal1604/Generative-AI-Chatbot-Application/blob/main/images/architecture/genai-chatbot-application.png)
+
 ### 1. **Frontend**:
 - **Streamlit**: Powers the interactive user interface, allowing users to upload PDFs, input YouTube links, and interact with the chatbot.
 
