@@ -2,6 +2,13 @@
 
 # 🌟 Generative AI Chatbot Application 🌟
 <hr>
+# Live Demo 🌐 
+
+Experience **MediAssist AI** in action on Streamlit:  
+[👉 Click here to access the application!](https://mediassist-ai.streamlit.app/)
+
+Explore the features and capabilities of our application designed to enhance healthcare workflows and decision-making.
+
 
 ## Project Details 📝
 
